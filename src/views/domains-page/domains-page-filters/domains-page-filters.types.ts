@@ -17,8 +17,8 @@ export type DomainsPageFilterConfig = {
     queryParams: PageQueryParamValues<typeof domainsPageQueryParamsConfig>
   ) => boolean;
   renderFilter:
-    | React.ComponentType<DomainsPageFilterProps>
-    | ((props: DomainsPageFilterProps) => React.ReactNode);
+  | React.ComponentType<DomainsPageFilterProps>
+  | ((props: DomainsPageFilterProps) => React.ReactNode);
 };
 
 export type DomainsPageFiltersConfig = Array<DomainsPageFilterConfig>;
