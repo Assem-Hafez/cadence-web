@@ -2,47 +2,12 @@ import type {
   StyletronCSSObject,
   StyletronCSSObjectOf,
 } from '@/hooks/use-styletron-classes';
+import { getMediaQueryMargins } from '@/utils/media-query/get-media-queries-margins';
 import type { Theme } from 'baseui';
-import { MediaQueryPageMargins, PageMargins } from 'baseui/helpers/types';
-import type { Responsive } from 'baseui/layout-grid';
 import { TabOverrides, TabsOverrides } from 'baseui/tabs-motion';
-import type { Breakpoints } from 'baseui/themes';
 import type { StyleObject } from 'styletron-react';
 
-export const getMediaQuery = (breakpoint: number): string =>
-  `@media screen and (min-width: ${breakpoint}px)`;
 
-export const getMediaQueries = (breakpoints: Breakpoints): string[] =>
-  Object.keys(breakpoints)
-    // @ts-ignore
-    .map((key) => breakpoints[key])
-    .sort((a, b) => a - b)
-    .map(getMediaQuery);
-
-const defaultCreateMargins = (margin: number): StyleObject => ({
-  marginRight: `${margin}px`,
-  marginLeft: `${margin}px`,
-});
-
-export function getMediaQueryMargins(
-  theme: Theme,
-  createStyles: (margin: number) => StyleObject = defaultCreateMargins
-) {
-  const result = {} as {
-    [key: string]: StyleObject;
-  };
-  const mediaQueries = getMediaQueries(theme.breakpoints);
-  for (const [index, query] of Object.entries(mediaQueries)) {
-    // There is no guarantee grid.margins will have enough margins to satisfy
-    // each breakpoint.
-    const margin = Array.isArray(theme.grid.margins)
-      ? theme.grid.margins[parseInt(index)] ?? theme.grid.margins.at(-1)
-      : theme.grid.margins;
-
-    result[query] = createStyles(margin);
-  }
-  return result;
-}
 
 export const overrides = {
   tabs: {
