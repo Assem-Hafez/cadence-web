@@ -1,7 +1,6 @@
 import { getMediaQueriesForBreakpoints } from '../get-media-queries-for-breakpoints';
 
 describe('getMediaQueriesForBreakpoints', () => {
-
   it('should return an array of media queries sorted in ascending order', () => {
     const breakpoints = {
       small: 480,
