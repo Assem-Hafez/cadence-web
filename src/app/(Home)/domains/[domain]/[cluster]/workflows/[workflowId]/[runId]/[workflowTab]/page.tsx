@@ -1,5 +1,5 @@
-import { worflowPageTabsConfig } from '@/containers/workflow-page/config/workflow-page-tabs.config';
-import WorkflowPageTabContent from '@/containers/workflow-page/workflow-page-tab-content/workflow-page-tab-content';
+import { worflowPageTabsConfig } from '@/views/workflow-page/config/workflow-page-tabs.config';
+import WorkflowPageTabContent from '@/views/workflow-page/workflow-page-tab-content/workflow-page-tab-content';
 
 export default WorkflowPageTabContent;
 

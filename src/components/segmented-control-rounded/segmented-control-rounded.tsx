@@ -1,7 +1,7 @@
 'use client';
 import { Segment, SegmentedControl } from 'baseui/segmented-control';
 import { overrides } from './segmented-control-rounded.styles';
-import React from 'react';
+import React, { useId } from 'react';
 import type { Props } from './segmented-control-rounded.types';
 
 export default function SegmentedControlRounded({
@@ -10,9 +10,11 @@ export default function SegmentedControlRounded({
   disabled,
   options,
 }: Props) {
+  const id = useId();
   return (
     <SegmentedControl
       overrides={overrides.segmentedControl}
+      uid={id}
       activeKey={activeKey}
       disabled={disabled}
       onChange={onChange}

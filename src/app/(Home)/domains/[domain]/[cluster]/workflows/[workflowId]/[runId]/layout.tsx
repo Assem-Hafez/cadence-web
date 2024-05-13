@@ -1,5 +1,3 @@
-import WorkflowPage from '@/containers/workflow-page/workflow-page';
+import WorkflowPage from '@/views/workflow-page/workflow-page';
 
 export default WorkflowPage;
-
-//export const dynamic = 'force-dynamic';
