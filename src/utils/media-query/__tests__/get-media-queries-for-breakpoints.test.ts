@@ -12,6 +12,8 @@ describe('getMediaQueriesForBreakpoints', () => {
       '@media screen and (min-width: 768px)',
       '@media screen and (min-width: 1024px)',
     ];
-    expect(getMediaQueriesForBreakpoints(breakpoints)).toEqual(expectedMediaQueries);
+    expect(getMediaQueriesForBreakpoints(breakpoints)).toEqual(
+      expectedMediaQueries
+    );
   });
 });
