@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import WorkflowPageHeader from './workflow-page-header/workflow-page-header';
-import PageSection from '@/components/page-section/page-section';
 import { Props } from './workflow-page.types';
 import AsyncPropsLoader from '@/components/async-props-loader/async-props-loader';
 import WorkflowStatusTag from '../shared/workflow-status-tag/workflow-status-tag';
@@ -11,7 +10,7 @@ export default async function WorkflowPage({ params, children }: Props) {
   const decodedParams = decodeUrlParams(params);
 
   return (
-    <main>
+    <>
       <WorkflowPageHeader
         domain={decodedParams.domain}
         workflowId={decodedParams.workflowId}
@@ -41,7 +40,7 @@ export default async function WorkflowPage({ params, children }: Props) {
           </Suspense>
         }
       />
-      <PageSection>{children}</PageSection>
-    </main>
+      {children}
+    </>
   );
 }

@@ -9,7 +9,6 @@ export default function WorkflowPageTabContent({ params }: Props) {
   const { cls } = useStyletronClasses(cssStyles);
   const selectedWorkflowTabName = params.workflowTab;
   const TabContent = worflowPageTabsContentsMapConfig[selectedWorkflowTabName];
-
   if (TabContent) return <div className={cls.tabContentContainer}><TabContent params={params} /></div>;
   return null;
 }

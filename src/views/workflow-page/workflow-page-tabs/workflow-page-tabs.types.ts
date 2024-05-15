@@ -1,5 +1,6 @@
 import { PageTab } from '@/components/page-tabs/page-tabs.types';
 import { worflowPageTabsConfig } from '../config/workflow-page-tabs.config';
+import React from 'react';
 
 
 export type WorkflowPageTabs = Array<PageTab>;
@@ -14,4 +15,5 @@ export type WorkflowPageTabsParams = {
 
 export type Props = {
   params: WorkflowPageTabsParams;
+  children: React.ReactNode;
 };
