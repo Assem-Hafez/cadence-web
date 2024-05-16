@@ -1,4 +1,4 @@
-import decodeUrlParams from "../decode-url-params";
+import decodeUrlParams from '../decode-url-params';
 
 describe('decodeUrlParams', () => {
   it('should decode URL params correctly', () => {
