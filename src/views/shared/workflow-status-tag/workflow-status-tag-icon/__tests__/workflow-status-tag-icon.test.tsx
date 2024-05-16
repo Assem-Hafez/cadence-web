@@ -3,7 +3,7 @@ import { render, screen } from '@/test-utils/rtl';
 
 import WorkflowStatusTagIcon from '../workflow-status-tag-icon';
 import { WorkflowStatusTagIconKind } from '../workflow-status-tag-icon.types';
-import { WorkflowStatus } from '../../workflow-status-tag.types';
+import type { WorkflowStatus } from '../../workflow-status-tag.types';
 
 describe('WorkflowStatusTagIcon', () => {
   beforeEach(() => {

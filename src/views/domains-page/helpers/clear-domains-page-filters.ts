@@ -1,9 +1,9 @@
-import {
+import type {
   PageQueryParamSetter,
   PageQueryParams,
 } from '@/hooks/use-page-query-params/use-page-query-params.types';
 import domainsPageFiltersConfig from '../config/domains-page-filters.config';
-import { DomainsPageFiltersConfig } from '../domains-page-filters/domains-page-filters.types';
+import type { DomainsPageFiltersConfig } from '../domains-page-filters/domains-page-filters.types';
 
 function clearDomainsPageFilters<P extends PageQueryParams>(
   setQueryParams: PageQueryParamSetter<P>,

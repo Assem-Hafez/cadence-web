@@ -1,6 +1,5 @@
 'use client';
-import useStyletronClasses from '@/hooks/use-styletron-classes';
-import { Props } from './pretty-json.types';
+import type { Props } from './pretty-json.types';
 
 export default function PrettyJson({ json }: Props) {
   return (

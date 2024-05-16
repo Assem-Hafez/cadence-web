@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import formatPayload from '@/views/workflow-page/helpers/format-payload';
 import { cssStyles } from './workflow-summary-tab.styles';
-import { WorkflowPageTabContentProps } from '@/views/workflow-page/workflow-page-tab-content/workflow-page-tab-content.types';
+import type { WorkflowPageTabContentProps } from '@/views/workflow-page/workflow-page-tab-content/workflow-page-tab-content.types';
 import WorkflowSummaryTabJsonView from './workflow-summary-tab-json-view/workflow-summary-tab-json-view';
 import useStyletronClasses from '@/hooks/use-styletron-classes';
 import SectionLoadingIndicator from '@/components/section-loading-indicator/section-loading-indicator';

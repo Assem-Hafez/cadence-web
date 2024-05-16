@@ -1,4 +1,4 @@
-import { AsyncLoaderComponent, Props } from './async-props-loader.types';
+import type { AsyncLoaderComponent, Props } from './async-props-loader.types';
 
 export default async function AsyncPropsLoader<C extends AsyncLoaderComponent>({
   component,

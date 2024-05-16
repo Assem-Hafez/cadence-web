@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { TestProvider } from './test-provider';
 
 import type { JSXElementConstructor, ReactNode } from 'react';
-import { PublicProviderProps, RenderHookOptions } from './rtl.types';
+import type { PublicProviderProps, RenderHookOptions } from './rtl.types';
 
 const customRender = (
   element: Parameters<typeof render>[0],

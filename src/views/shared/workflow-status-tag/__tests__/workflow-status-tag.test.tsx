@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@/test-utils/rtl';
 import WorkflowStatusTag from '../workflow-status-tag';
 
-import { type WorkflowStatus } from '../workflow-status-tag.types';
+import type { WorkflowStatus } from '../workflow-status-tag.types';
 
 jest.mock('../workflow-status-tag-icon/workflow-status-tag-icon', () =>
   jest.fn(({ kind }) => <div>Mock icon {kind}</div>)

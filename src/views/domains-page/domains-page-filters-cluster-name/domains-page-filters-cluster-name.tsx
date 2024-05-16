@@ -8,7 +8,7 @@ import {
 import { FormControl } from 'baseui/form-control';
 import { Select } from 'baseui/select';
 import CLUSTERS_CONFIGS from '@/config/clusters/clusters.config';
-import { DomainsPageFilterProps } from '../domains-page-filters/domains-page-filters.types';
+import type { DomainsPageFilterProps } from '../domains-page-filters/domains-page-filters.types';
 
 const clustersOptions = CLUSTERS_CONFIGS.map(({ clusterName }) => ({
   label: clusterName,

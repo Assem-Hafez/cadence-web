@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import WorkflowPageHeader from './workflow-page-header/workflow-page-header';
-import { Props } from './workflow-page.types';
+import type { Props } from './workflow-page.types';
 import AsyncPropsLoader from '@/components/async-props-loader/async-props-loader';
 import WorkflowStatusTag from '../shared/workflow-status-tag/workflow-status-tag';
 import { getCachedWorkflowExecution } from './helpers/get-workflow-execution';

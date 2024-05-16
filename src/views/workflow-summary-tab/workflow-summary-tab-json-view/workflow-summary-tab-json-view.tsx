@@ -5,7 +5,7 @@ import SegmentedControlRounded from '@/components/segmented-control-rounded/segm
 import PrettyJson from '@/components/pretty-json/pretty-json';
 import useStyletronClasses from '@/hooks/use-styletron-classes';
 import { cssStyles } from './workflow-summary-tab-json-view.styles';
-import { Props } from './workflow-summary-tab-json-view.types';
+import type { Props } from './workflow-summary-tab-json-view.types';
 import { Button, KIND, SHAPE, SIZE } from 'baseui/button';
 import { MdCopyAll } from 'react-icons/md';
 import { jsonViewTabsOptions } from './workflow-summary-tab-json-view.constants';

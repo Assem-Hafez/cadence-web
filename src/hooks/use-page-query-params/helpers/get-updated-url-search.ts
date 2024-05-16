@@ -8,7 +8,7 @@
  * It returns the new url search string by applying changes from queryParamValuesToUpdateMap to the currentUrlSearch
  */
 
-import {
+import type {
   PageQueryParamKeys,
   PageQueryParams,
   PageQueryParamSetterValues,

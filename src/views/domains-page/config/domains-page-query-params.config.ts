@@ -1,5 +1,5 @@
-import { PageQueryParam } from '@/hooks/use-page-query-params/use-page-query-params.types';
-import { SortingOrder } from '@/components/table/table.types';
+import type { PageQueryParam } from '@/hooks/use-page-query-params/use-page-query-params.types';
+import type { SortingOrder } from '@/components/table/table.types';
 
 const domainsPageQueryParamsConfig: [
   PageQueryParam<'searchText', string>,

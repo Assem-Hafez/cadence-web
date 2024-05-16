@@ -1,17 +1,13 @@
 'use client';
-import React, { Suspense } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import { Cell, Grid } from 'baseui/layout-grid';
 import Link from 'next/link';
-import { LabelSmall } from 'baseui/typography';
 import useStyletronClasses from '@/hooks/use-styletron-classes';
 import { Breadcrumbs } from 'baseui/breadcrumbs';
 import { StyledLink } from 'baseui/link';
-import PageTabs from '@/components/page-tabs/page-tabs';
 import cadenceLogoSquare from '@/assets/cadence-logo-square.svg';
-import { worflowPageTabsConfig } from '../config/workflow-page-tabs.config';
 import { cssStyles, overrides } from './workflow-page-header.styles';
-import { Props } from './workflow-page-header.types';
+import type { Props } from './workflow-page-header.types';
 import PageSection from '@/components/page-section/page-section';
 
 export default function WorkflowPageHeader({
@@ -22,7 +18,7 @@ export default function WorkflowPageHeader({
 }: Props) {
   const { cls } = useStyletronClasses(cssStyles);
   return (
-    <PageSection as='header'>
+    <PageSection>
       <Breadcrumbs
         overrides={overrides.breadcrumbs}
         showTrailingSeparator={false}
@@ -34,11 +30,11 @@ export default function WorkflowPageHeader({
             alt="Cadence Icon"
             src={cadenceLogoSquare}
           />
-
-          <StyledLink $as={Link} href="#">
+          <StyledLink $as={Link} href={`/domains/${encodeURIComponent(domain)}`}>
             {domain}
           </StyledLink>
         </div>
+        {/** TODO: @assem.hafez change those to actual links */}
         <StyledLink $as={Link} href="#">
           {workflowId}
         </StyledLink>

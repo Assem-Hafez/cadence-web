@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs, Tab } from 'baseui/tabs-motion';
-import { Props } from './page-tabs.types';
+import type { Props } from './page-tabs.types';
 import { overrides } from './page-tabs.styles';
 
 export default function PageTabs({
