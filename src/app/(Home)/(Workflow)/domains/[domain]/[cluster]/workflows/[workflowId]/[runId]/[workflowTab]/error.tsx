@@ -3,7 +3,6 @@ import { HeadingXSmall } from 'baseui/typography';
 import { styled } from 'baseui';
 import AlertIcon from 'baseui/icon/alert';
 
-
 // TODO: @assem.hafez extract error component to reusable error messages component
 
 const StyledContainer = styled('div', ({ $theme }) => {
@@ -26,7 +25,7 @@ export default function HomePageError({
   return (
     <StyledContainer>
       <AlertIcon size={64} />
-      <HeadingXSmall>Failed to load workflow</HeadingXSmall>
+      <HeadingXSmall>Failed to load content</HeadingXSmall>
     </StyledContainer>
   );
 }

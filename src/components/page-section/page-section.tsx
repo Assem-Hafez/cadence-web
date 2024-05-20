@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Cell, Grid } from 'baseui/layout-grid';
 import type { Props } from './page-section.types';
