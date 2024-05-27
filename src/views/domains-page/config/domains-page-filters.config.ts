@@ -7,7 +7,7 @@ const domainsPageFiltersConfig = [
     filterFunc: (domain, queryParams) =>
       Boolean(
         !queryParams.clusterName ||
-        domain.clusters.find((c) => c.clusterName === queryParams.clusterName)
+          domain.clusters.find((c) => c.clusterName === queryParams.clusterName)
       ),
     renderFilter: DomainsPageFiltersClusterName,
   },

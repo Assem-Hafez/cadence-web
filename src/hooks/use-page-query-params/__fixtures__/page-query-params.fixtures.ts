@@ -11,29 +11,29 @@ export const queryParamsConfig: [
   PageQueryParamMultiValue<'parsedMultiVal', number[]>,
   PageQueryParamMultiValue<'multiValDefaulted', string[]>,
 ] = [
-    {
-      key: 'sortBy',
-    },
-    {
-      key: 'aliased',
-      queryParamKey: 'aliasName',
-    },
-    {
-      key: 'defaulted',
-      defaultValue: 'defaultValue',
-    },
-    {
-      key: 'parsed',
-      parseValue: (v) => (v ? parseInt(v) : 0),
-    },
-    {
-      key: 'parsedMultiVal',
-      parseValue: (v) => (v ? parseInt(v) : 0),
-      isMultiValue: true,
-    },
-    {
-      key: 'multiValDefaulted',
-      defaultValue: ['a'],
-      isMultiValue: true,
-    },
-  ];
+  {
+    key: 'sortBy',
+  },
+  {
+    key: 'aliased',
+    queryParamKey: 'aliasName',
+  },
+  {
+    key: 'defaulted',
+    defaultValue: 'defaultValue',
+  },
+  {
+    key: 'parsed',
+    parseValue: (v) => (v ? parseInt(v) : 0),
+  },
+  {
+    key: 'parsedMultiVal',
+    parseValue: (v) => (v ? parseInt(v) : 0),
+    isMultiValue: true,
+  },
+  {
+    key: 'multiValDefaulted',
+    defaultValue: ['a'],
+    isMultiValue: true,
+  },
+];

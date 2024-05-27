@@ -8,4 +8,3 @@ export const jsonViewTabsOptions = [
     label: 'Result',
   },
 ];
-

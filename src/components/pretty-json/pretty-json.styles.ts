@@ -15,37 +15,35 @@ const cssStylesObj = {
     wordBreak: 'break-all',
   },
   booleanValue: {
-    color: '#FC823A'
-
+    color: '#FC823A',
   },
   nullValue: {
-    color: '#5B91F5'
+    color: '#5B91F5',
   },
   undefinedValue: {
-    color: '#5B91F5'
+    color: '#5B91F5',
   },
   punctuation: (theme) => ({
-    color: theme.colors.contentInverseTertiary
+    color: theme.colors.contentInverseTertiary,
   }),
   clickableLabel: (theme) => ({
     color: '#016974',
     marginRight: theme.sizing.scale200,
-    cursor: 'pointer'
+    cursor: 'pointer',
   }),
   label: {
     color: '#016974',
     marginRight: '7px',
   },
   numberValue: {
-    color: '#06C167'
+    color: '#06C167',
   },
-  collapsedContent:
-    (theme) => ({
-      color: theme.colors.contentInverseTertiary,
-      ':after': {
-        content: '" ... "'
-      }
-    }),
+  collapsedContent: (theme) => ({
+    color: theme.colors.contentInverseTertiary,
+    ':after': {
+      content: '" ... "',
+    },
+  }),
   container: {},
   otherValue: {},
   expandIcon: {},

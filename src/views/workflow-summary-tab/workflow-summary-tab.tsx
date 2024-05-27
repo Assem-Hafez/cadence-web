@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useEffect, useState } from 'react';
 import formatPayload from '@/views/workflow-page/helpers/format-payload';
 import { cssStyles } from './workflow-summary-tab.styles';
@@ -11,36 +11,39 @@ export default function WorkflowSummaryTab({
   params,
 }: WorkflowPageTabContentProps) {
   const { cls } = useStyletronClasses(cssStyles);
-  const [{ loading, error, data: workflowHistory }, setWorkflowHistory] = useState({ loading: true, error: null, data: null })
+  const [{ loading, error, data: workflowHistory }, setWorkflowHistory] =
+    useState({ loading: true, error: null, data: null });
   const workflowEvents = workflowHistory?.history?.events;
 
   useEffect(() => {
-    fetch(`/api/domains/${params.domain}/${params.cluster}/workflows/${params.workflowId}/${params.runId}/history`)
+    fetch(
+      `/api/domains/${params.domain}/${params.cluster}/workflows/${params.workflowId}/${params.runId}/history`
+    )
       .then((res) => res.json())
       .then((data) => {
-        setWorkflowHistory({ data, error: null, loading: false })
-      }).catch((error) => {
-        setWorkflowHistory({ data: null, error, loading: false })
+        setWorkflowHistory({ data, error: null, loading: false });
       })
-  }, [])
+      .catch((error) => {
+        setWorkflowHistory({ data: null, error, loading: false });
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // propagate error to the closes error layout
   if (error) throw new Error(error);
-  if (loading) return <SectionLoadingIndicator />
+  if (loading) return <SectionLoadingIndicator />;
 
   return (
     <div className={cls.pageContainer}>
       <div className={cls.mainContent}>
-        <div>
-          Summary section
-        </div>
-        <div>
-          Taskslist
-        </div>
+        <div>Summary section</div>
+        <div>Taskslist</div>
       </div>
       <div className={cls.jsonArea}>
         <WorkflowSummaryTabJsonView
-          inputJson={formatPayload(workflowEvents?.[0]?.workflowExecutionStartedEventAttributes?.input)}
+          inputJson={formatPayload(
+            workflowEvents?.[0]?.workflowExecutionStartedEventAttributes?.input
+          )}
           resultJson={{}}
         />
       </div>

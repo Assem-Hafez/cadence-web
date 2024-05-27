@@ -8,17 +8,18 @@ type RouteParams = {
   workflowId: string;
   runId: string;
 };
-export async function GET(request: Request, { params }: { params: RouteParams }) {
+export async function GET(
+  request: Request,
+  { params }: { params: RouteParams }
+) {
   const decodedParams = decodeUrlParams(params);
-  const res = await grpcClient.clusterMethods[params.cluster].describeWorkflow(
-    {
-      domain: decodedParams.domain,
-      workflowExecution: {
-        workflowId: decodedParams.workflowId,
-        runId: decodedParams.runId,
-      },
-    }
-  )
+  const res = await grpcClient.clusterMethods[params.cluster].describeWorkflow({
+    domain: decodedParams.domain,
+    workflowExecution: {
+      workflowId: decodedParams.workflowId,
+      runId: decodedParams.runId,
+    },
+  });
 
-  return Response.json(res)
+  return Response.json(res);
 }

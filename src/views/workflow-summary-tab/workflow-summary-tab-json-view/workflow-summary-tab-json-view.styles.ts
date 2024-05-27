@@ -1,4 +1,3 @@
-
 import type {
   StyletronCSSObject,
   StyletronCSSObjectOf,
@@ -8,7 +7,7 @@ const cssStylesObj = {
   jsonViewContainer: (theme) => ({
     padding: theme.sizing.scale600,
     backgroundColor: theme.colors.backgroundSecondary,
-    borderRadius: theme.borders.radius300
+    borderRadius: theme.borders.radius300,
   }),
   jsonViewHeader: (theme) => ({
     display: 'flex',
@@ -17,9 +16,9 @@ const cssStylesObj = {
     marginBottom: theme.sizing.scale700,
   }),
   copyBtn: (theme) => ({
-    'svg': {
+    svg: {
       marginRight: theme.sizing.scale300,
-    }
+    },
   }),
 } satisfies StyletronCSSObject;
 
