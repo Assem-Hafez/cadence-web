@@ -16,6 +16,11 @@ const cssStylesObj = {
     gap: theme.sizing.scale600,
     marginBottom: theme.sizing.scale700,
   }),
+  copyBtn: (theme) => ({
+    'svg': {
+      marginRight: theme.sizing.scale300,
+    }
+  }),
 } satisfies StyletronCSSObject;
 
 export const cssStyles: StyletronCSSObjectOf<typeof cssStylesObj> =
